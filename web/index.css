@@ -1,0 +1,229 @@
+@charset "UTF-8";
+body{
+	font-family :"Arial", "Helvetica", sans-serif;
+	background-color : #faf5e4; 
+	color : black;
+}
+
+/* Navigation Bar (Logo, Search Bar, Account, Cart) */
+.navbar {
+    
+    display: flex;
+    justify-content: space-evenly;
+    height: 60px;
+    padding-top : 9px;
+    padding-bottom : 4px;
+    padding-left : 10px;
+    background-color: #faf5e4; /* Set a background color */
+    position: fixed; /* Fix the navbar to the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left */
+    right: 0; /* Align it to the right */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+}
+
+.logo{
+	display : flex;
+	align-items: center;
+}
+
+.fresh{
+	color : #2c786c; 
+}
+
+.track{
+	color : #f8b400; 
+}
+
+.search-container{
+	border : 2px solid white;
+	border-radius : 10px;
+	height : 20px;
+	width : 500px;
+	display : flex;
+	align-items: center;
+	padding:10px;
+	margin : 2px;
+	background-color : #ffffff;
+}
+
+.search-input{
+	border : none;
+	font-size : 15px;
+	padding-left : 5px;
+	outline: none;
+}
+
+.search-container:hover{
+	border : 2px solid black;
+}
+
+.cart-button{
+	border : 2px solid #2c786c;
+	border-radius : 5px;
+	height : 30px;
+	background-color : #2c786c;
+	font-size : 14px;
+	color : white;
+	margin : 9px;
+	cursor : pointer;
+	position: relative; /* Make the button a positioning context for the badge */
+}
+
+.badge {
+    background-color: #f8b400; /* Red background */
+    color: white; /* White text */
+    border-radius: 50%; /* Circular shape */
+    padding: 5px 10px; /* Padding for size */
+    position: absolute; /* Position it relative to the cart button */
+    top: -12px; /* Adjust as needed */
+    right: -14px; /* Adjust as needed */
+    font-size: 12px; /* Font size */
+    display: none; /* Initially hidden */
+}
+
+
+.navbar a{
+	text-decoration : none;
+	color : black;
+	margin : 13px;
+}
+.kitchen-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    padding-top : 90px;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: left; /* Align text to the left */
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin : 5px;
+    justify-content : center;
+}
+.card {
+    padding: 3px;
+    margin : 15px;
+    text-align: center;
+    width : 90px;
+    height :110px;
+    cursor : pointer;
+}
+.card img {
+	border-radius : 8px;
+    height: 80px;
+    width: 80px;
+}
+
+.card p{
+	font-size : 12px;
+}
+
+#seeAll{
+	padding-left : 60px;
+	padding-right : 60px;
+}
+
+#seeAll a{
+	color :#2c786c;
+	text-decoration : none;
+	padding-top : 25px;
+}
+.items{
+	display : flex;
+	justify-content : center;
+}
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    width: 120px;
+    height : 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+.product-card img {
+    width : 90px;
+    height : 90px;
+    border-radius: 8px;
+}
+.product-card p{
+	font-size : 12px;
+	text-align: left;
+	height : 22px;
+}
+.price{
+	display : flex;
+	justify-content : space-between;
+}
+.product-card button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height : 30px;
+}
+.product-card button:hover {
+    background-color: #218838;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer a{
+    padding: 10px;
+}
+footer i{
+	padding : 3px;
+	border : 2px solid black;
+	border-radius : 50px;
+	background-color : black;
+	color : white;
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left : -580px;
+    background-color:#f8b400 ;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 14px;
+    transition: visibility 0s, opacity 0.5s linear, transform 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+    animation: pop 0.5s ease forwards; /* Add pop animation */
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.8); /* Start smaller */
+    }
+    50% {
+        transform: scale(1.1); /* Scale up slightly */
+    }
+    100% {
+        transform: scale(1); /* Return to original size */
+    }
+}

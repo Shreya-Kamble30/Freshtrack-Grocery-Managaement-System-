@@ -1,0 +1,305 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Fresh Track - Your Instant Grocery Solution</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+	<!-- Message to pop when Product is added to cart -->
+	<div id="toast" class="toast"></div>
+	
+	<nav class="navbar">
+		<div class="logo">
+			<h2 class="fresh">Fresh</h2>
+			<h2 class="track">Track</h2>
+		</div>
+		<div class="search-container">
+	        <i class="fas fa-search"></i>
+	        <input type="text" placeholder="Search Here" class="search-input" id="searchInput">
+	    </div>
+            <a href="account.jsp">Account</a>
+            <a href="adminLogin.jsp">Admin</a>
+	    <button class="cart-button" onclick="window.location.href='Cart.jsp';">
+	        <i class="fa-solid fa-cart-shopping"></i>
+	        My Cart
+	        <span id="cart-badge" class="badge">0</span>
+    	</button>
+	</nav>
+	
+	<div class="kitchen-container">
+        <div class="flex-container">
+            <div class="card" onclick="window.location.href='Dairy.jsp';">
+                <img alt="Packets of Dairy, Bread, and Eggs" src="./Images/Milk-Eggs.jpg"/>
+                <p>Dairy, Bread and Eggs</p>
+            </div>
+            <div class="card" onclick="window.location.href='Fruits.jsp';">
+                <img alt="fruits" src="./Images/Fruits.jpg"/>
+                <p>Fruits</p>
+            </div>
+            <div class="card" onclick="window.location.href='Vegetables.jsp';">
+                <img alt="vegetables" src="./Images/Vegetables.jpg"/>
+                <p>Vegetables</p>
+            </div>
+            <div class="card" onclick="window.location.href='Drinks.jsp';">
+                <img alt="Juice" src="./Images/Juice.jpg"/>
+                <p>Juices and Soft Drinks</p>
+            </div>
+            <div class="card" onclick="window.location.href='Snacks.jsp';">
+                <img alt="Snacks" src="./Images/Snacks.jpg"/>
+                <p>Snacks and Munchies</p>
+            </div>
+            <div class="card" onclick="window.location.href='Breakfast.jsp';">
+                <img alt="Poha" src="./Images/Breakfast.jpg"/>
+                <p>Breakfast and Instant Food</p>
+            </div>
+            <div class="card" onclick="window.location.href='Sweet.jsp';">
+                <img alt="icecream" src="./Images/IceCream.jpg"/>
+                <p>Sweet Tooth</p>
+            </div>
+            <div class="card" onclick="window.location.href='Biscuits.jsp';">
+                <img alt="Biscuits" src="./Images/Biscuits.jpg"/>
+                <p>Bakery and Biscuits</p>
+            </div>
+            <div class="card" onclick="window.location.href='Tea.jsp';">
+                <img alt="tea" src="./Images/Tea.jpg"/>
+                <p>Tea, Coffee and Health Drink</p>
+            </div>
+            <div class="card" onclick="window.location.href='Atta.jsp';">
+                <img alt="atta" src="./Images/Atta.jpg"/>
+                <p>Atta, Rice and Dal</p>
+            </div>
+            <div class="card" onclick="window.location.href='Masala.jsp';">
+                <img alt="masala" src="./Images/Masala.jpg"/>
+                <p>Masala, Oil and More</p>
+            </div>
+            <div class="card" onclick="window.location.href='Sauce.jsp';">
+                <img alt="spread" src="./Images/Spread.jpg"/>
+                <p>Sauces and Spread</p>
+            </div>
+            <div class="card" onclick="window.location.href='Meat.jsp';">
+                <img alt="meat" src="./Images/Sea-Food.jpg"/>
+                <p>Chicken, Meat and Fish</p>
+            </div>
+            <div class="card" onclick="window.location.href='Baby.jsp';">
+                <img alt="baby" src="./Images/Baby.jpg"/>
+                <p>Baby Care</p>
+            </div>
+            <div class="card" onclick="window.location.href='Clean.jsp';">
+                <img alt="clean" src="./Images/Tide.jpg"/>
+                <p>Cleaning Essentials</p>
+            </div>
+            <div class="card" onclick="window.location.href='Care.jsp';">
+                <img alt="personal" src="./Images/Personal.jpg"/>
+                <p>Personal Care</p>
+            </div>
+            <div class="card" onclick="window.location.href='Pet.jsp';">
+                <img alt="pet" src="./Images/Pet.jpg"/>
+                <p>Pet Care</p>
+            </div>
+        </div>
+    </div>
+    <div class="price" id="seeAll">
+	    <h2>Dairy, Bread and Eggs</h2>
+	    <a href="Dairy.jsp">See All</a>
+	</div>
+    <section class="items">
+	    <div class="product-card" data-name="Amul Salted Butter" data-price="60">
+	        <img src="./Images/Amul-Butter.jpg" alt="butter">
+	        <p><strong>Amul Salted Butter</strong></p>
+	        <p>100g</p>
+	        <div class="price">
+	            <p>₹60</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	    <div class="product-card" data-name="Amul Masti Curd" data-price="77">
+	        <img src="./Images/Amul-Curd.jpg" alt="curd">
+	        <p><strong>Amul Masti Curd</strong></p>
+	        <p>1kg</p>
+	        <div class="price">
+	            <p>₹77</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	    <div class="product-card" data-name="Britannia Brown Bread" data-price="50">
+	        <img src="./Images/Brown-Bread.jpg" alt="bread">
+	        <p><strong>Britannia Brown Bread</strong></p>
+	        <p>400g</p>
+	        <div class="price">
+	            <p>₹50</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	    <div class="product-card" data-name="Amul Cheese Slices" data-price="85">
+	        <img src="./Images/Cheese.jpeg" alt="cheese">
+	        <p><strong>Amul Cheese Slices</strong></p>
+	        <p>100g</p>
+	        <div class="price">
+	            <p>₹85</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	    <div class="product-card" data-name="Yojana Poultry Power White Eggs - 6 pcs" data-price="53">
+	        <img src="./Images/Eggs.jpeg" alt="milk">
+	        <p><strong>Yojana Poultry Power White Eggs</strong></p>
+	        <p>6 pcs</p>
+	        <div class="price">
+	            <p>₹53</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	    <div class="product-card" data-name="Amul Taaza Toned Fresh Milk" data-price="28">
+	        <img src="./Images/Amul-Milk.jpg" alt="milk">
+	        <p><strong>Amul Taaza Toned Fresh Milk</strong></p>
+	        <p>500ml</p>
+	        <div class="price">
+	            <p>₹28</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	</section>
+	<div class="price" id="seeAll">
+	    <h2>Snacks & Munchies</h2>
+	    <a href="Snacks.jsp">See All</a>
+	</div>
+    <section class="items">
+	    <div class="product-card" data-name="Lay's India's Magic Masala Potato Chips" data-price="30">
+	        <img src="./Images/Blue-Lays.jpeg" alt="lays">
+	        <p><strong>Lay's India's Magic Masala Potato Chips</strong></p>
+	        <p>67g</p>
+	        <div class="price">
+	            <p>₹30</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	    <div class="product-card" data-name="Cheetos Cheez Puffs" data-price="10">
+	        <img src="./Images/Cheetos.jpg" alt="curd">
+	        <p><strong>Cheetos Cheez Puffs</strong></p>
+	        <p>28g</p>
+	        <div class="price">
+	            <p>₹10</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	    <div class="product-card" data-name="Panchratan Mixture Namkeen" data-price="90">
+	        <img src="./Images/Haldiram.jpg" alt="bread">
+	        <p><strong>Panchratan Mixture Namkeen</strong></p>
+	        <p>150g</p>
+	        <div class="price">
+	            <p>₹90</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	    <div class="product-card" data-name="Doritos Sweet Chilli Flavour Nachos" data-price="40">
+	        <img src="./Images/Doritos.jpeg" alt="cheese">
+	        <p><strong>Doritos Sweet Chilli Flavour Nachos</strong></p>
+	        <p>82.5g</p>
+	        <div class="price">
+	            <p>₹40</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	    <div class="product-card" data-name="Kurkure Masala Munch Crisps" data-price="18">
+	        <img src="./Images/Kurkure.jpg" alt="milk">
+	        <p><strong>Kurkure Masala Munch Crisps</strong></p>
+	        <p>75g</p>
+	        <div class="price">
+	            <p>₹18</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	    <div class="product-card" data-name="Haldiram's Nagpur Aloo Bhujia" data-price="235">
+	        <img src="./Images/Haldiram-1.jpeg" alt="milk">
+	        <p><strong>Haldiram's Nagpur Aloo Bhujia</strong></p>
+	        <p>1kg</p>
+	        <div class="price">
+	            <p>₹235</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	</section>
+	<div class="price" id="seeAll">
+	    <h2>Cold Drinks & Juices</h2>
+	    <a href="Drinks.jsp">See All</a>
+	</div>
+    <section class="items">
+	    <div class="product-card" data-name="Appy Apple Juice" data-price="10">
+	        <img src="./Images/Appy.jpeg" alt="lays">
+	        <p><strong>Appy Apple Juice</strong></p>
+	        <p>125ml</p>
+	        <div class="price">
+	            <p>₹10</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	    <div class="product-card" data-name="Coca-Cola Soft Drink" data-price="40">
+	        <img src="./Images/Coco-Cola-Can.jpeg" alt="curd">
+	        <p><strong>Coca-Cola Soft Drink</strong></p>
+	        <p>300ml</p>
+	        <div class="price">
+	            <p>₹40</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	    <div class="product-card" data-name="Amul Sweet Lassi" data-price="20">
+	        <img src="./Images/Lassi.jpeg" alt="bread">
+	        <p><strong>Amul Sweet Lassi</strong></p>
+	        <p>200ml</p>
+	        <div class="price">
+	            <p>₹20</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	    <div class="product-card" data-name="Maaza Mango Drink " data-price="42">
+	        <img src="./Images/Maaza.jpg" alt="cheese">
+	        <p><strong>Maaza Mango Drink </strong></p>
+	        <p>600ml</p>
+	        <div class="price">
+	            <p>₹42</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	    <div class="product-card" data-name="Amul Masti Spiced Salted Buttermilk" data-price="15">
+	        <img src="./Images/Masti.jpeg" alt="milk">
+	        <p><strong>Amul Masti Spiced Salted Buttermilk</strong></p>
+	        <p>200ml</p>
+	        <div class="price">
+	            <p>₹15</p>
+	            <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	    <div class="product-card" data-name="Thums Up Soft Drink " data-price="45">
+	        <img src="./Images/Thums-Up.jpeg" alt="milk">
+	        <p><strong>Thums Up Soft Drink </strong></p>
+	        <p>750ml</p>
+	        <div class="price">
+	            <p>₹45</p>
+	             <button class="add-to-cart">ADD</button>
+	        </div>
+	    </div>
+	</section>
+    <hr>
+    <footer>
+        <a href="https://www.instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.pinterest.com" target="_blank">
+            <i class="fab fa-pinterest"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the top */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    background-color: #faf5e4; /* Original background color */
+}
+
+.container {
+    width: 90%; /* Width of the container */
+    max-width: 400px; /* Reduced max-width for a more compact layout */
+    padding: 20px; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 0 10px #f2e5b9; /* Softer shadow */
+    background-color: #faf5e4; /* Original background color */
+    text-align: center; /* Center the content */
+    margin-top: 20px; /* Added margin to separate from the top */
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    color: #333; /* Original text color */
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px; /* Adjusted margin for better spacing */
+    color: #333; /* Original label color */
+}
+
+input, select {
+    width: 100%;
+    padding: 10px; /* Reduced padding for inputs */
+    margin-bottom: 15px; /* Reduced margin for inputs */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Reduced font size */
+}
+
+input:focus, select:focus {
+    border-color: #f8b400; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    width: 100%;
+    padding: 10px; /* Reduced padding for button */
+    cursor: pointer;
+    background-color: #f8b400; /* Original button color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 14px; /* Reduced font size */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #f8b400; /* Original hover color */
+    transform: scale(1.05);
+}
+
+a {
+    text-decoration: none;
+    color: #f8b400; /* Original link color */
+    font-weight: bold;
+    margin-top: 15px; /* Adjusted margin for spacing */
+    display: inline-block; /* Make the link a block for better click area */
+}
+
+a:hover {
+    color: #ffc52c; /* Original hover color for links */
+}

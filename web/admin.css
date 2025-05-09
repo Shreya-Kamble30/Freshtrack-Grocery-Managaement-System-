@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and font for the body */
+body {
+    font-family: "Arial", "Helvetica", sans-serif;
+    background-color: #faf5e4; 
+    color: black;
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #f2e5b9;
+    background-color: #faf5e4;
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+    background-color: #f8b400;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px 0; /* Adjust margin for better spacing */
+}
+
+button:hover {
+    background-color: #e09e00; /* Change hover color for better contrast */
+    transform: scale(1.05);
+}
