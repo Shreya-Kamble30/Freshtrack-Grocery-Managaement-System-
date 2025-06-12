@@ -21,3 +21,22 @@ FreshTrack is a Grocery Management System designed to help users manage their gr
 
 ## Target Audience
 FreshTrack is designed for busy families, individuals, and grocery store administrators looking to streamline their grocery shopping and management processes.
+
+## How to Use
+**User Login and Navigation**
+
+1. Login with email: Shreyakamble30@gmail.com and password: Java.
+2. Choose categories to view products.
+3. Add products to cart or remove them.
+4. Visit "My Cart" to review selected products.
+5. Use the "Home" button to return to the main page.
+6. Utilize the search feature to find specific products.
+
+**Admin Login and Product Management**
+
+1. Login with username: Admin and password: adminpanel.
+2. Click "Manage Products" to view the product list.
+3. Add or delete products as needed.
+4. Organize products into categories.
+5. To return to the admin dashboard, scroll down and click "Back to Admin Dashboard."
+6. Logout when finished.
